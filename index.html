@@ -1,0 +1,878 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Madhur Sabherwal | Data Engineer Portfolio</title>
+    <!-- Import Poppins font for a modern, clean look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <style>
+    /* Reset */
+    * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+    }
+    /* Colour palette for monochromatic, professional feel */
+    :root {
+        --bg: #f7f7f7;
+        --primary: #333333;
+        --secondary: #555555;
+        --accent: #888888;
+        --card-bg: #ffffff;
+        --card-border: #dddddd;
+        --text: #333333;
+        --text-muted: #666666;
+    }
+    body {
+        font-family: 'Poppins', sans-serif;
+        line-height: 1.6;
+        background: var(--bg);
+        color: var(--text);
+    }
+    /* Navigation */
+    nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        background: var(--card-bg);
+        border-bottom: 1px solid var(--card-border);
+        z-index: 100;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 12px 40px;
+    }
+    nav .logo {
+        font-size: 1.5rem;
+        font-weight: 600;
+        color: var(--primary);
+    }
+    nav ul {
+        list-style: none;
+        display: flex;
+        gap: 20px;
+    }
+    nav ul li a {
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 500;
+        transition: color 0.3s ease;
+    }
+    nav ul li a:hover {
+        color: var(--secondary);
+    }
+    /* Header / Hero */
+    header {
+        background: var(--bg);
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 40px 20px;
+    }
+    .hero-container {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        max-width: 1100px;
+        margin-top: 80px; /* offset for fixed nav */
+    }
+    .hero-left {
+        flex: 1;
+        padding-right: 20px;
+    }
+    .hero-left h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        color: var(--primary);
+    }
+    .hero-left p {
+        font-size: 1.2rem;
+        margin-bottom: 20px;
+        color: var(--secondary);
+        font-weight: 500;
+    }
+    .typed-intro {
+        font-weight: 600;
+    }
+    #typed-text {
+        color: var(--secondary);
+    }
+    .cta {
+        display: inline-block;
+        padding: 10px 24px;
+        border: 2px solid var(--primary);
+        border-radius: 30px;
+        color: var(--primary);
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+    }
+    .cta:hover {
+        background: var(--primary);
+        color: #fff;
+    }
+    .hero-right {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .hero-image-wrapper {
+        width: 320px;
+        height: 320px;
+        border-radius: 50%;
+        overflow: hidden;
+        border: 4px solid var(--card-border);
+        background: var(--card-bg);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .hero-image-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    /* Main content */
+    main {
+        padding: 60px 40px;
+        max-width: 1100px;
+        margin: 0 auto;
+    }
+    section {
+        margin-bottom: 60px;
+        padding: 40px;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    }
+    h2 {
+        margin-bottom: 20px;
+        font-size: 1.8rem;
+        color: var(--primary);
+    }
+    h3 {
+        color: var(--primary);
+        margin-bottom: 8px;
+    }
+    p {
+        margin-bottom: 12px;
+        color: var(--text);
+        line-height: 1.6;
+    }
+    ul {
+        padding-left: 20px;
+        margin-bottom: 0;
+    }
+    li {
+        margin-bottom: 8px;
+    }
+    /* Timeline */
+    .timeline {
+        position: relative;
+        margin-top: 20px;
+        padding-left: 40px;
+    }
+    .timeline::before {
+        content: '';
+        position: absolute;
+        left: 20px;
+        top: 0;
+        bottom: 0;
+        width: 2px;
+        background: var(--card-border);
+    }
+    .timeline-item {
+        position: relative;
+        margin-bottom: 40px;
+        padding-left: 30px;
+    }
+    .timeline-item::before {
+        content: '';
+        position: absolute;
+        left: -6px;
+        top: 5px;
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        background: var(--primary);
+        border: 2px solid var(--card-bg);
+    }
+    .timeline-content {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 8px;
+        padding: 20px;
+        box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    /* Projects */
+    .projects-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+    }
+    .project-card {
+        background-color: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        overflow: hidden;
+        flex: 1;
+        min-width: 260px;
+        max-width: 32%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-bottom: 20px;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .project-image-wrapper {
+        width: 100%;
+        padding-top: 70%;
+        position: relative;
+        border-bottom: 1px solid var(--card-border);
+        overflow: hidden;
+    }
+    .project-image-wrapper img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .project-card h3 {
+        margin: 16px 0 8px;
+        font-size: 1.1rem;
+        color: var(--primary);
+    }
+    .project-card p {
+        margin: 0 20px;
+        font-size: 0.9rem;
+        color: var(--text-muted);
+    }
+    .project-card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+    /* Skills */
+    .skills-container {
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+    }
+    .skill span {
+        display: block;
+        font-weight: 500;
+        margin-bottom: 6px;
+        color: var(--primary);
+    }
+    .skill-bar {
+        background-color: var(--card-border);
+        height: 10px;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .skill-level {
+        background: var(--primary);
+        height: 100%;
+        border-radius: 20px;
+    }
+    /* Services */
+    #services {
+        margin-top: 40px;
+    }
+    .services-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .service-card {
+        background-color: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        padding: 20px;
+        flex: 1;
+        min-width: 260px;
+        max-width: 32%;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        color: var(--text);
+    }
+    .service-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .service-icon-wrapper {
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        margin: 0 auto 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .service-icon-wrapper img {
+        width: 60%;
+        height: 60%;
+        object-fit: contain;
+    }
+    .service-card h3 {
+        color: var(--primary);
+        margin-bottom: 8px;
+        font-size: 1.2rem;
+    }
+    .service-card p {
+        font-size: 0.9rem;
+        line-height: 1.4;
+        color: var(--text-muted);
+    }
+
+    /* Licenses & Certifications */
+    #licenses {
+        margin-top: 40px;
+    }
+    .cert-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .cert-card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        padding: 20px;
+        flex: 1;
+        min-width: 260px;
+        max-width: 32%;
+        text-align: center;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        color: var(--text);
+    }
+    .cert-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .cert-icon-wrapper {
+        width: 70px;
+        height: 70px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        margin: 0 auto 16px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .cert-icon-wrapper img {
+        width: 60%;
+        height: 60%;
+        object-fit: contain;
+    }
+    .cert-card h3 {
+        color: var(--primary);
+        margin-bottom: 8px;
+        font-size: 1.1rem;
+    }
+    .cert-card p {
+        font-size: 0.85rem;
+        color: var(--text-muted);
+        line-height: 1.4;
+    }
+
+    /* Recommendations */
+    #recommendations {
+        margin-top: 40px;
+    }
+    .recommendations-grid {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+    .recommendation-card {
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 16px;
+        padding: 20px;
+        flex: 1;
+        min-width: 260px;
+        max-width: 32%;
+        box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .recommendation-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+    .rec-icon-wrapper {
+        width: 60px;
+        height: 60px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        margin-bottom: 12px;
+    }
+    .rec-icon-wrapper img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+    .recommendation-card h3 {
+        color: var(--primary);
+        margin-bottom: 4px;
+        font-size: 1.1rem;
+    }
+    .recommendation-card .rec-role {
+        font-size: 0.9rem;
+        color: var(--text-muted);
+        margin-bottom: 8px;
+    }
+    .recommendation-card .rec-text {
+        font-size: 0.85rem;
+        color: var(--text);
+        line-height: 1.4;
+    }
+    /* Footer */
+    footer {
+        background-color: var(--card-bg);
+        text-align: center;
+        padding: 30px;
+        color: var(--text-muted);
+        border-top: 1px solid var(--card-border);
+    }
+    /* Responsive adjustments */
+    @media (max-width: 900px) {
+        .hero-container {
+            flex-direction: column;
+            text-align: center;
+        }
+        .hero-left {
+            padding-right: 0;
+            margin-bottom: 20px;
+        }
+        .hero-image-wrapper {
+            width: 260px;
+            height: 260px;
+        }
+        .projects-grid {
+            flex-direction: column;
+            align-items: center;
+        }
+        .project-card {
+            max-width: 100%;
+        }
+        .services-grid {
+            flex-direction: column;
+        }
+        .cert-grid {
+            flex-direction: column;
+        }
+        .cert-card {
+            max-width: 100%;
+        }
+        .recommendations-grid {
+            flex-direction: column;
+        }
+        .recommendation-card {
+            max-width: 100%;
+        }
+    }
+    @media (max-width: 600px) {
+        nav {
+            padding: 12px 20px;
+        }
+        nav ul {
+            flex-direction: column;
+            gap: 12px;
+        }
+        .hero-left h1 {
+            font-size: 2rem;
+        }
+        .hero-left p {
+            font-size: 1rem;
+        }
+        section {
+            padding: 30px;
+        }
+    }
+    </style>
+</head>
+<body>
+    <nav>
+        <div class="logo">Madhur Sabherwal</div>
+        <ul class="nav-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#experience">Experience</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <!-- Updated navigation links to include separate sections for licenses/certifications and awards -->
+            <li><a href="#licenses">Licenses & Certifications</a></li>
+            <li><a href="#recommendations">Recommendations</a></li>
+            <li><a href="#awards">Awards</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+    <header id="home">
+        <div class="hero-container">
+            <div class="hero-left">
+                <!-- Updated to a more general, friendly tagline rather than a specific job title -->
+                <h1>Your Data Guy</h1>
+                <p class="typed-intro">Expert in <span id="typed-text"></span></p>
+                <a href="#contact" class="cta">Get in Touch</a>
+            </div>
+            <div class="hero-right">
+                <div class="hero-image-wrapper">
+                    <img src="images/illustration.png" alt="Data Engineer Illustration">
+                </div>
+            </div>
+        </div>
+    </header>
+    <main>
+        <section id="about">
+            <h2>About Me</h2>
+            <p>As a seasoned data engineer, I specialise in designing scalable data platforms that translate complex data into strategic insights. My work accelerates time‑to‑insight while optimising costs and ensuring governance. Recently at BGC (Australia) Pty Ltd, I streamlined ETL pipelines across Microsoft Fabric, Azure Data Factory and NiFi, reducing batch processing times by 40% and accelerating time‑to‑insight. I also built a cost‑optimised data lakehouse using Apache Kafka, Hadoop and Snowflake, cutting infrastructure costs by 30% while ensuring auditability and governance【987458079634145†L342-L377】.</p>
+            <p>I thrive on solving business problems through data architecture, mentoring teams and collaborating with stakeholders to deliver robust solutions. With native English, Hindi and Punjabi language skills, I navigate cross‑cultural teams with ease.</p>
+            <p>I also focus on cutting‑edge topics such as agentic AI and large language models, exploring how autonomous agents and advanced AI can transform data‑driven decision making and unlock new business opportunities.</p>
+        </section>
+        <!-- Licenses & Certifications section moved below the Skills section -->
+        <!-- Licenses & Certifications placeholder removed: will be inserted after Skills section -->
+        <section id="services">
+            <h2>Core Capabilities</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <img src="images/service1.png" alt="Data Architecture Icon">
+                    </div>
+                    <h3>Data Architecture</h3>
+                    <p>Design scalable, secure data platforms and pipelines from ingestion to consumption, delivering real‑time insights and strategic value.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <img src="images/service2.png" alt="Data Governance Icon">
+                    </div>
+                    <h3>Data Governance</h3>
+                    <p>Implement robust governance frameworks, elevating data quality and compliance while maintaining lineage and auditability.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon-wrapper">
+                        <img src="images/service3.png" alt="Cloud Solutions Icon">
+                    </div>
+                    <h3>Cloud Solutions</h3>
+                    <p>Architect and optimise cloud‑native data solutions on Azure, AWS and Snowflake, delivering cost‑effective scalability and performance.</p>
+                </div>
+            </div>
+        </section>
+        <section id="experience">
+            <h2>Experience</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Data Engineer – BGC (Australia) Pty Ltd</h3>
+                        <span class="date">Jan 2023 – Present</span>
+                        <ul>
+                            <li>Streamlined ETL pipelines across Microsoft Fabric, Azure Data Factory and NiFi, reducing batch processing latency by 40% and accelerating time‑to‑insight.</li>
+                            <li>Built a cost‑optimised data lakehouse using Apache Kafka, Hadoop and Snowflake, cutting infrastructure costs by 30% and ensuring governance.</li>
+                            <li>Implemented data quality and governance checks that increased compliance from 85% to 98% and improved auditability.</li>
+                            <li>Delivered enterprise‑grade data warehouse and real‑time integrations with high‑volume systems; designed dashboards with optimised SQL for a 35% performance lift.</li>
+                            <li>Led proof‑of‑concepts (Fivetran/Airflow) and mentored engineers to elevate organisational data maturity.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Associate Data Engineer – INX Software</h3>
+                        <span class="date">Jan 2022 – Jan 2023</span>
+                        <ul>
+                            <li>Standardised and automated data workflows across teams using DataOps principles; cut deployment cycles by 50%.</li>
+                            <li>Built and maintained cloud‑native ETL pipelines with Python, DBT and Snowflake, slashing processing times by 90% and reducing costs.</li>
+                            <li>Integrated data from mining and workforce systems, enabling advanced analytics while ensuring data accuracy and compliance.</li>
+                            <li>Implemented CI/CD and proactive monitoring for data products to improve reliability and minimise incidents.</li>
+                            <li>Developed SQL warehouses and lakehouse solutions on Azure/AWS; mentored juniors to foster continuous improvement.</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="projects">
+            <h2>Key Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="images/project1.png" alt="ETL Pipeline Optimisation">
+                    </div>
+                    <h3>ETL Pipeline Optimisation</h3>
+                    <p>Streamlined batch and streaming ETL workflows across Microsoft Fabric, Azure Data Factory and NiFi, reducing processing latency by 40% and accelerating reporting.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="images/project2.png" alt="Data Lakehouse Implementation">
+                    </div>
+                    <h3>Data Lakehouse Implementation</h3>
+                    <p>Architected a cost‑optimised data lakehouse using Apache Kafka, Hadoop and Snowflake; delivered 30% infrastructure savings and scalable, governed data access.</p>
+                </div>
+                <div class="project-card">
+                    <div class="project-image-wrapper">
+                        <img src="images/project3.png" alt="DataOps &amp; CI/CD">
+                    </div>
+                    <h3>DataOps &amp; CI/CD</h3>
+                    <p>Instituted DataOps pipelines and CI/CD across ETL workflows; halved deployment cycles and improved reliability through proactive monitoring and automation.</p>
+                </div>
+            </div>
+        </section>
+        <section id="skills">
+            <h2>Skills</h2>
+            <div class="skills-container">
+                <!-- Enhanced skills list with emerging and advanced technologies -->
+                <div class="skill">
+                    <span>Data Engineering</span>
+                    <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>ETL &amp; Data Pipelines</span>
+                    <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Cloud &amp; Data Platforms (Azure, AWS, Snowflake)</span>
+                    <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Apache Spark &amp; Databricks</span>
+                    <div class="skill-bar"><div class="skill-level" style="width:85%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>SQL, Python &amp; PySpark</span>
+                    <div class="skill-bar"><div class="skill-level" style="width:92%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Machine Learning &amp; Agentic AI</span>
+                    <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>Vector Databases</span>
+                    <div class="skill-bar"><div class="skill-level" style="width:70%"></div></div>
+                </div>
+                <div class="skill">
+                    <span>DataOps &amp; CI/CD</span>
+                    <div class="skill-bar"><div class="skill-level" style="width:88%"></div></div>
+                </div>
+            </div>
+        </section>
+        <!-- Licenses & Certifications section dynamically summarising key credentials -->
+        <section id="licenses">
+            <h2>Licenses &amp; Certifications</h2>
+            <div class="cert-grid">
+                <!-- Confluent Data Streaming Engineer -->
+                <div class="cert-card">
+                    <div class="cert-icon-wrapper">
+                        <img src="images/confluent.png" alt="Confluent Data Streaming">
+                    </div>
+                    <h3>Data Streaming Engineer</h3>
+                    <p>Confluent certification demonstrating proficiency with Apache Kafka and streaming data pipelines. Credential ID 153657031. Issued Jun&nbsp;2025 – Expires Jun&nbsp;2027.</p>
+                </div>
+                <!-- SnowPro Core Certification -->
+                <div class="cert-card">
+                    <div class="cert-icon-wrapper">
+                        <img src="images/snowflake.png" alt="SnowPro Core">
+                    </div>
+                    <h3>SnowPro Core Certification</h3>
+                    <p>Snowflake credential validating expertise in Snowflake architecture, data warehousing and cloud data engineering. Credential ID 144446911. Issued May&nbsp;2025 – Expires May&nbsp;2027.</p>
+                </div>
+                <!-- AI & ML specialisations -->
+                <div class="cert-card">
+                    <div class="cert-icon-wrapper">
+                        <img src="images/ai_ml.png" alt="AI &amp; ML">
+                    </div>
+                    <h3>AI &amp; ML Specialisations</h3>
+                    <p>Completed multi‑course specialisations on Coursera and edX covering self‑driving cars, natural language processing, TensorFlow and time‑series prediction from the University of Toronto and DeepLearning.AI. Demonstrates solid foundations in machine learning and deep learning.</p>
+                </div>
+                <!-- Cloud & Data Platform certifications -->
+                <div class="cert-card">
+                    <div class="cert-icon-wrapper">
+                        <img src="images/google_cloud.png" alt="Cloud &amp; Data">
+                    </div>
+                    <h3>Cloud &amp; Data Platform Certifications</h3>
+                    <p>Certified across Azure (AI Fundamentals, Data Fundamentals, Fabric Analytics Engineer and Data Scientist Associate), AWS (Fundamentals, Security, Migration, Serverless &amp; Cloud‑Native) and Google Cloud machine‑learning programmes, demonstrating versatile cloud data expertise.</p>
+                </div>
+                <!-- Data & Analytics tools -->
+                <div class="cert-card">
+                    <div class="cert-icon-wrapper">
+                        <img src="images/dbt.png" alt="Data &amp; Analytics">
+                    </div>
+                    <h3>Data &amp; Analytics Tools</h3>
+                    <p>Skilled in dbt fundamentals and a variety of data science and programming courses including Python programming, geospatial analysis, database design, WordPress site development and more—equipping me to deliver end‑to‑end data solutions.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Recommendations section showcasing testimonials from mentors, peers and academics -->
+        <section id="recommendations">
+            <h2>Recommendations</h2>
+            <div class="recommendations-grid">
+                <!-- Nelson Goh recommendation -->
+                <div class="recommendation-card">
+                    <div class="rec-icon-wrapper">
+                        <img src="images/profile.png" alt="Nelson Goh">
+                    </div>
+                    <h3>Nelson Goh</h3>
+                    <p class="rec-role">Senior Data Engineer at INX Software (Mentor)</p>
+                    <p class="rec-text">Madhur’s drive and passion for data science are unmatched. His facial‑recognition project for INX Hack Day 2022 won the Most Innovative prize.</p>
+                </div>
+                <!-- Satya Prakash recommendation -->
+                <div class="recommendation-card">
+                    <div class="rec-icon-wrapper">
+                        <img src="images/profile.png" alt="Satya Prakash">
+                    </div>
+                    <h3>Satya Prakash</h3>
+                    <p class="rec-role">Utilities Engineer &amp; Deputy Manager</p>
+                    <p class="rec-text">A great motivator and exemplary senior who shares knowledge generously. Working with Madhur has been an inspiring learning experience.</p>
+                </div>
+                <!-- Amin Beheshti recommendation -->
+                <div class="recommendation-card">
+                    <div class="rec-icon-wrapper">
+                        <img src="images/profile.png" alt="Amin Beheshti">
+                    </div>
+                    <h3>Amin Beheshti</h3>
+                    <p class="rec-role">Professor &amp; Director, Centre for Applied AI</p>
+                    <p class="rec-text">Madhur’s pristine work ethic and adaptability stood out in my classes at Macquarie University. He goes out of his way to help others.</p>
+                </div>
+                <!-- Hassan Doosti recommendation -->
+                <div class="recommendation-card">
+                    <div class="rec-icon-wrapper">
+                        <img src="images/profile.png" alt="Hassan Doosti">
+                    </div>
+                    <h3>Hassan Doosti</h3>
+                    <p class="rec-role">Program Director &amp; Senior Lecturer, Macquarie University</p>
+                    <p class="rec-text">Knowledgeable, articulate and hardworking, Madhur brought integrity and intelligence to every task during his Master’s programme.</p>
+                </div>
+                <!-- Vaibhav Rai recommendation -->
+                <div class="recommendation-card">
+                    <div class="rec-icon-wrapper">
+                        <img src="images/profile.png" alt="Vaibhav Rai">
+                    </div>
+                    <h3>Vaibhav Rai</h3>
+                    <p class="rec-role">Business Analyst &amp; Data Analyst</p>
+                    <p class="rec-text">Multi‑talented and enthusiastic, he’s always eager to learn and implement new technologies and to lend a helping hand.</p>
+                </div>
+                <!-- Gaurav Gupta recommendation -->
+                <div class="recommendation-card">
+                    <div class="rec-icon-wrapper">
+                        <img src="images/profile.png" alt="Gaurav Gupta">
+                    </div>
+                    <h3>Gaurav Gupta</h3>
+                    <p class="rec-role">Director of Education, Macquarie University</p>
+                    <p class="rec-text">One of the hardest‑working students I’ve taught; Madhur combines perseverance with honed analytical skills to achieve great results.</p>
+                </div>
+                <!-- Er. Gurupreet Singh recommendation -->
+                <div class="recommendation-card">
+                    <div class="rec-icon-wrapper">
+                        <img src="images/profile.png" alt="Er Gurupreet Singh">
+                    </div>
+                    <h3>Er. Gurupreet Singh</h3>
+                    <p class="rec-role">Pre‑owned Vehicle Ecosystem Leader</p>
+                    <p class="rec-text">A tech geek with an innovative mind and a gifted writer, he’s equipped with the right tools and mindset to excel.</p>
+                </div>
+                <!-- Paras Sarna recommendation -->
+                <div class="recommendation-card">
+                    <div class="rec-icon-wrapper">
+                        <img src="images/profile.png" alt="Paras Sarna">
+                    </div>
+                    <h3>Paras Sarna</h3>
+                    <p class="rec-role">Full‑Stack Developer</p>
+                    <p class="rec-text">Can step into any area and conquer it; always learning new technologies and ready to support others.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Awards section split out from certifications -->
+        <section id="awards">
+            <h2>Awards &amp; Achievements</h2>
+            <ul>
+                <li>Most Ambitious Project – INX Hack Day (Facial Recognition Attendance System)</li>
+                <li>First Prize – Project Exhibition at Guru Nanak Institute of Technology</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>Interested in collaborating or discussing data engineering challenges? Feel free to reach out.</p>
+            <ul class="contact-info">
+                <li>Email: <a href="mailto:madhur@example.com">madhur@example.com</a></li>
+                <li>LinkedIn: <a href="https://www.linkedin.com/in/madhur-sabherwal/" target="_blank">linkedin.com/in/madhur-sabherwal</a></li>
+            </ul>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Madhur Sabherwal. All rights reserved.</p>
+    </footer>
+    <!-- Typed text effect script -->
+    <script>
+        // Typed effect for hero tagline
+        const phrases = [
+            // Expanded phrases to reflect cutting‑edge topics in data and AI
+            "Agentic AI & LLMs",
+            "Vector Databases & Streaming",
+            "Scalable Data Platforms",
+            "Futuristic Data & AI Solutions"
+        ];
+        let currentPhraseIndex = 0;
+        let currentLetterIndex = 0;
+        let currentLetters = [];
+        let isDeleting = false;
+
+        function typeLoop() {
+            const typedTextElement = document.getElementById('typed-text');
+            if (!typedTextElement) return;
+            // Add characters
+            if (!isDeleting && currentLetterIndex <= phrases[currentPhraseIndex].length) {
+                currentLetters.push(phrases[currentPhraseIndex][currentLetterIndex]);
+                currentLetterIndex++;
+                typedTextElement.textContent = currentLetters.join('');
+            }
+            // Pause at end
+            if (currentLetterIndex === phrases[currentPhraseIndex].length) {
+                isDeleting = true;
+            }
+            // Delete characters
+            if (isDeleting && currentLetterIndex > 0) {
+                currentLetters.pop();
+                currentLetterIndex--;
+                typedTextElement.textContent = currentLetters.join('');
+            }
+            // Switch to next phrase
+            if (isDeleting && currentLetterIndex === 0) {
+                isDeleting = false;
+                currentPhraseIndex++;
+                if (currentPhraseIndex >= phrases.length) {
+                    currentPhraseIndex = 0;
+                }
+            }
+            const typingSpeed = isDeleting ? 60 : 120;
+            const pauseAfterEnd = 1500;
+            setTimeout(typeLoop, currentLetterIndex === phrases[currentPhraseIndex].length && !isDeleting ? pauseAfterEnd : typingSpeed);
+        }
+        document.addEventListener('DOMContentLoaded', typeLoop);
+    </script>
+</body>
+</html>
