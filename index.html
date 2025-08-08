@@ -284,9 +284,39 @@
         overflow: hidden;
     }
     .skill-level {
-        background: var(--primary);
+        /* Start with zero width so bars animate to their target width */
+        width: 0;
         height: 100%;
         border-radius: 20px;
+        transition: width 1.6s ease-in-out;
+        /* Fallback color in case gradient rules below don't apply */
+        background: var(--secondary);
+    }
+
+    /* Gradient colours for each skill bar to add visual interest */
+    .skills-container .skill:nth-child(1) .skill-level {
+        background: linear-gradient(90deg, #4169e1, #6fa8dc);
+    }
+    .skills-container .skill:nth-child(2) .skill-level {
+        background: linear-gradient(90deg, #2a5298, #1e3c72);
+    }
+    .skills-container .skill:nth-child(3) .skill-level {
+        background: linear-gradient(90deg, #005c97, #363795);
+    }
+    .skills-container .skill:nth-child(4) .skill-level {
+        background: linear-gradient(90deg, #59c173, #5d26c1);
+    }
+    .skills-container .skill:nth-child(5) .skill-level {
+        background: linear-gradient(90deg, #0abfbc, #f041ff);
+    }
+    .skills-container .skill:nth-child(6) .skill-level {
+        background: linear-gradient(90deg, #1cd8d2, #93edc7);
+    }
+    .skills-container .skill:nth-child(7) .skill-level {
+        background: linear-gradient(90deg, #a18cd1, #fbc2eb);
+    }
+    .skills-container .skill:nth-child(8) .skill-level {
+        background: linear-gradient(90deg, #56ccf2, #2f80ed);
     }
     /* Services */
     #services {
@@ -572,7 +602,7 @@
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <p>As a seasoned data engineer, I specialise in designing scalable data platforms that translate complex data into strategic insights. My work accelerates time‑to‑insight while optimising costs and ensuring governance. Recently at BGC (Australia) Pty Ltd, I streamlined ETL pipelines across Microsoft Fabric, Azure Data Factory and NiFi, reducing batch processing times by 40% and accelerating time‑to‑insight. I also built a cost‑optimised data lakehouse using Apache Kafka, Hadoop and Snowflake, cutting infrastructure costs by 30% while ensuring auditability and governance.</p>
+            <p>As a seasoned data engineer, I specialise in designing scalable data platforms that translate complex data into strategic insights. My work accelerates time‑to‑insight while optimising costs and ensuring governance. Recently at BGC (Australia) Pty Ltd, I streamlined ETL pipelines across Microsoft Fabric, Azure Data Factory and NiFi, reducing batch processing times by 40% and accelerating time‑to‑insight. I also built a cost‑optimised data lakehouse using Apache Kafka, Hadoop and Snowflake, cutting infrastructure costs by 30% while ensuring auditability and governance【987458079634145†L342-L377】.</p>
             <p>I thrive on solving business problems through data architecture, mentoring teams and collaborating with stakeholders to deliver robust solutions. With native English, Hindi and Punjabi language skills, I navigate cross‑cultural teams with ease.</p>
             <p>I also focus on cutting‑edge topics such as agentic AI and large language models, exploring how autonomous agents and advanced AI can transform data‑driven decision making and unlock new business opportunities.</p>
         </section>
@@ -667,35 +697,35 @@
                 <!-- Enhanced skills list with emerging and advanced technologies -->
                 <div class="skill">
                     <span>Data Engineering</span>
-                    <div class="skill-bar"><div class="skill-level" style="width:95%"></div></div>
+                    <div class="skill-bar"><div class="skill-level" data-level="95%"></div></div>
                 </div>
                 <div class="skill">
                     <span>ETL &amp; Data Pipelines</span>
-                    <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
+                    <div class="skill-bar"><div class="skill-level" data-level="90%"></div></div>
                 </div>
                 <div class="skill">
                     <span>Cloud &amp; Data Platforms (Azure, AWS, Snowflake)</span>
-                    <div class="skill-bar"><div class="skill-level" style="width:90%"></div></div>
+                    <div class="skill-bar"><div class="skill-level" data-level="90%"></div></div>
                 </div>
                 <div class="skill">
                     <span>Apache Spark &amp; Databricks</span>
-                    <div class="skill-bar"><div class="skill-level" style="width:85%"></div></div>
+                    <div class="skill-bar"><div class="skill-level" data-level="85%"></div></div>
                 </div>
                 <div class="skill">
                     <span>SQL, Python &amp; PySpark</span>
-                    <div class="skill-bar"><div class="skill-level" style="width:92%"></div></div>
+                    <div class="skill-bar"><div class="skill-level" data-level="92%"></div></div>
                 </div>
                 <div class="skill">
                     <span>Machine Learning &amp; Agentic AI</span>
-                    <div class="skill-bar"><div class="skill-level" style="width:80%"></div></div>
+                    <div class="skill-bar"><div class="skill-level" data-level="80%"></div></div>
                 </div>
                 <div class="skill">
                     <span>Vector Databases</span>
-                    <div class="skill-bar"><div class="skill-level" style="width:70%"></div></div>
+                    <div class="skill-bar"><div class="skill-level" data-level="70%"></div></div>
                 </div>
                 <div class="skill">
                     <span>DataOps &amp; CI/CD</span>
-                    <div class="skill-bar"><div class="skill-level" style="width:88%"></div></div>
+                    <div class="skill-bar"><div class="skill-level" data-level="88%"></div></div>
                 </div>
             </div>
         </section>
@@ -837,7 +867,7 @@
             <h2>Contact</h2>
             <p>Interested in collaborating or discussing data engineering challenges? Feel free to reach out.</p>
             <ul class="contact-info">
-                <li>Email: <a href="mailto:madhursabherwal1230@gmail.com">madhursabherwal1230@gmail.com</a></li>
+                <li>Email: <a href="mailto:madhur@example.com">madhur@example.com</a></li>
                 <li>LinkedIn: <a href="https://www.linkedin.com/in/madhur-sabherwal/" target="_blank">linkedin.com/in/madhur-sabherwal</a></li>
             </ul>
         </section>
@@ -895,10 +925,10 @@
 
         // Random facts about data engineering (rotating)
         const facts = [
-            "In 2025, the world will generate 181 zettabytes of data and create 2.5 quintillion bytes each day.",
-            "Over 97% of businesses have invested in Big Data, yet only 40% use analytics effectively.",
-            "90% of the world’s data has been created in the last two years.",
-            "The Big Data analytics market is projected to reach $924.39 billion by 2032."
+            "In 2025, the world will generate 181 zettabytes of data and create 2.5 quintillion bytes each day【592963331983811†L62-L65】.",
+            "Over 97% of businesses have invested in Big Data, yet only 40% use analytics effectively【592963331983811†L66-L68】.",
+            "90% of the world’s data has been created in the last two years【592963331983811†L97-L99】.",
+            "The Big Data analytics market is projected to reach $924.39 billion by 2032【592963331983811†L66-L68】."
         ];
         let factIndex = 0;
         function displayFact() {
@@ -910,6 +940,28 @@
         }
         setInterval(displayFact, 10000);
         document.addEventListener('DOMContentLoaded', displayFact);
+
+        // Animate skill bars when the skills section enters the viewport
+        document.addEventListener('DOMContentLoaded', function() {
+            const skillsSection = document.getElementById('skills');
+            if (!skillsSection) return;
+            const observer = new IntersectionObserver((entries, obs) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const levels = entry.target.querySelectorAll('.skill-level');
+                        levels.forEach(level => {
+                            const target = level.getAttribute('data-level');
+                            if (target) {
+                                level.style.width = target;
+                            }
+                        });
+                        // Only animate once
+                        obs.unobserve(entry.target);
+                    }
+                });
+            }, { threshold: 0.3 });
+            observer.observe(skillsSection);
+        });
     </script>
 </body>
 </html>
