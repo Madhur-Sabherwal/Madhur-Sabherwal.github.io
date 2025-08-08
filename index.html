@@ -1,14 +1,15 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Madhur Sabherwal | Data  Portfolio</title>
-    <!-- Import Poppins font for a modern, clean look -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
-    <style>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Madhur Sabherwal | Data  Portfolio</title>
+<!-- Import Poppins font for a modern, clean look -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<style>
     /* Reset */
     * {
         box-sizing: border-box;
@@ -118,29 +119,9 @@
         background: var(--primary);
         color: #fff;
     }
-    .hero-right {
-        flex: 1;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-    .hero-image-wrapper {
-        width: 320px;
-        height: 320px;
-        border-radius: 50%;
-        overflow: hidden;
-        border: 4px solid var(--card-border);
-        background: var(--card-bg);
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    }
-    .hero-image-wrapper img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
+    
+    
+    
     /* Main content */
     main {
         padding: 60px 40px;
@@ -518,10 +499,7 @@
             padding-right: 0;
             margin-bottom: 20px;
         }
-        .hero-image-wrapper {
-            width: 260px;
-            height: 260px;
-        }
+        
         .projects-grid {
             flex-direction: column;
             align-items: center;
@@ -563,322 +541,329 @@
             padding: 30px;
         }
     }
-    </style>
-</head>
+    
+/* Enhanced modern visuals */
+section, .project-card, .cert-card, .recommendation-card, .service-card {
+    border-radius: 20px !important;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.08) !important;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+section:hover, .project-card:hover, .cert-card:hover, .recommendation-card:hover, .service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+.card-bg {
+    background-color: #ffffff;
+    border-radius: 16px;
+    padding: 20px;
+}
+</style>
+<meta content="Madhur Sabherwal is a results-driven Data Engineer specializing in Microsoft Fabric, Azure, Snowflake, and emerging AI technologies. Explore his projects, skills, and certifications." name="description"/><link href="https://madhur-sabherwal.github.io/" rel="canonical"/><meta content="Madhur Sabherwal | Data Engineer Portfolio" property="og:title"/><meta content="Madhur Sabherwal is a results-driven Data Engineer specializing in Microsoft Fabric, Azure, Snowflake, and emerging AI technologies. Explore his projects, skills, and certifications." property="og:description"/><meta content="https://madhur-sabherwal.github.io/" property="og:url"/><meta content="website" property="og:type"/></head>
 <body>
-    <nav>
-        <div class="logo">Madhur Sabherwal</div>
-        <ul class="nav-links">
-            <li><a href="#about">About</a></li>
-            <li><a href="#experience">Experience</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <!-- Updated navigation links to include separate sections for licenses/certifications and awards -->
-            <li><a href="#licenses">Licenses & Certifications</a></li>
-            <li><a href="#recommendations">Recommendations</a></li>
-            <li><a href="#awards">Awards</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <header id="home">
-        <div class="hero-container">
-            <div class="hero-left">
-                <!-- Updated to a more general, friendly tagline rather than a specific job title -->
-                <h1>Your Data Guy</h1>
-                <p class="typed-intro">Expert in <span id="typed-text"></span></p>
-                <a href="#contact" class="cta">Get in Touch</a>
-            </div>
-            <div class="hero-right">
-                <div class="hero-image-wrapper">
-                    <img src="illustration.png" alt="Data Engineer Illustration">
-                </div>
-            </div>
-        </div>
-        <!-- Dynamic facts about data engineering -->
-        <div id="facts-container" class="facts-container">
-            <span id="fact-text"></span>
-        </div>
-    </header>
- <section id="about">
-    <h2>About Me</h2>
-    <p>I am a results-driven Data Engineer with a proven track record of architecting scalable data platforms that convert complex datasets into actionable business intelligence. At BGC (Australia) Pty Ltd, I led the modernisation of data pipelines across Microsoft Fabric, Azure Data Factory, and Apache NiFi—achieving a 40% reduction in batch processing time and significantly improving time-to-insight.</p>
-
-    <p>My recent initiatives include building a cost-efficient data lakehouse leveraging Apache Kafka, Hadoop, and Snowflake—delivering 30% infrastructure savings while maintaining enterprise-grade auditability and compliance standards. I excel at bridging the gap between technical execution and strategic objectives, mentoring high-performing teams, and collaborating cross-functionally to deliver business-aligned data solutions.</p>
-
-    <p>Fluent in English, Hindi, and Punjabi, I work effectively across diverse, cross-cultural teams. I’m also deeply engaged with emerging technologies such as Agentic AI and large language models, exploring their potential to revolutionize decision-making and unlock competitive advantage through autonomous data-driven systems.</p>
+<nav>
+<div class="logo">Madhur Sabherwal</div>
+<ul class="nav-links">
+<li><a href="#about">About</a></li>
+<li><a href="#experience">Experience</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#skills">Skills</a></li>
+<!-- Updated navigation links to include separate sections for licenses/certifications and awards -->
+<li><a href="#licenses">Licenses &amp; Certifications</a></li>
+<li><a href="#recommendations">Recommendations</a></li>
+<li><a href="#awards">Awards</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+</nav>
+<header id="home">
+<div class="hero-container">
+<div class="hero-left">
+<!-- Updated to a more general, friendly tagline rather than a specific job title -->
+<h1>Your Data Guy</h1>
+<p class="typed-intro">Expert in <span id="typed-text"></span></p>
+<a class="cta" href="#contact">Get in Touch</a>
+</div>
+<!-- Hero image removed -->
+</div>
+<!-- Dynamic facts about data engineering -->
+<div class="facts-container" id="facts-container">
+<span id="fact-text"></span>
+</div>
+</header>
+<section id="about">
+<h2>About Me</h2>
+<p>I am a results-driven Data Engineer with a proven track record of architecting scalable data platforms that convert complex datasets into actionable business intelligence. At BGC (Australia) Pty Ltd, I led the modernisation of data pipelines across Microsoft Fabric, Azure Data Factory, and Apache NiFi—achieving a 40% reduction in batch processing time and significantly improving time-to-insight.</p>
+<p>My recent initiatives include building a cost-efficient data lakehouse leveraging Apache Kafka, Hadoop, and Snowflake—delivering 30% infrastructure savings while maintaining enterprise-grade auditability and compliance standards. I excel at bridging the gap between technical execution and strategic objectives, mentoring high-performing teams, and collaborating cross-functionally to deliver business-aligned data solutions.</p>
+<p>Fluent in English, Hindi, and Punjabi, I work effectively across diverse, cross-cultural teams. I’m also deeply engaged with emerging technologies such as Agentic AI and large language models, exploring their potential to revolutionize decision-making and unlock competitive advantage through autonomous data-driven systems.</p>
+</section>
+<!-- Licenses & Certifications section moved below the Skills section -->
+<!-- Licenses & Certifications placeholder removed: will be inserted after Skills section -->
+<section id="services">
+<h2>Core Capabilities</h2>
+<div class="services-grid">
+<div class="service-card">
+<div class="service-icon-wrapper">
+<img alt="Data Architecture Icon" src="service1.png"/>
+</div>
+<h3>Data Architecture</h3>
+<p>Design scalable, secure data platforms and pipelines from ingestion to consumption, delivering real‑time insights and strategic value.</p>
+</div>
+<div class="service-card">
+<div class="service-icon-wrapper">
+<img alt="Data Governance Icon" src="service2.png"/>
+</div>
+<h3>Data Governance</h3>
+<p>Implement robust governance frameworks, elevating data quality and compliance while maintaining lineage and auditability.</p>
+</div>
+<div class="service-card">
+<div class="service-icon-wrapper">
+<img alt="Cloud Solutions Icon" src="service3.png"/>
+</div>
+<h3>Cloud Solutions</h3>
+<p>Architect and optimise cloud‑native data solutions on Azure, AWS and Snowflake, delivering cost‑effective scalability and performance.</p>
+</div>
+</div>
+</section>
+<section id="experience">
+<h2>Experience</h2>
+<div class="timeline">
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>Data Engineer – BGC (Australia) Pty Ltd</h3>
+<span class="date">Jan 2023 – Present</span>
+<ul>
+<li>Streamlined ETL pipelines across Microsoft Fabric, Azure Data Factory and NiFi, reducing batch processing latency by 40% and accelerating time‑to‑insight.</li>
+<li>Built a cost‑optimised data lakehouse using Apache Kafka, Hadoop and Snowflake, cutting infrastructure costs by 30% and ensuring governance.</li>
+<li>Implemented data quality and governance checks that increased compliance from 85% to 98% and improved auditability.</li>
+<li>Delivered enterprise‑grade data warehouse and real‑time integrations with high‑volume systems; designed dashboards with optimised SQL for a 35% performance lift.</li>
+<li>Led proof‑of‑concepts (Fivetran/Airflow) and mentored engineers to elevate organisational data maturity.</li>
+</ul>
+</div>
+</div>
+<div class="timeline-item">
+<div class="timeline-content">
+<h3>Associate Data Engineer – INX Software</h3>
+<span class="date">Jan 2022 – Jan 2023</span>
+<ul>
+<li>Standardised and automated data workflows across teams using DataOps principles; cut deployment cycles by 50%.</li>
+<li>Built and maintained cloud‑native ETL pipelines with Python, DBT and Snowflake, slashing processing times by 90% and reducing costs.</li>
+<li>Integrated data from mining and workforce systems, enabling advanced analytics while ensuring data accuracy and compliance.</li>
+<li>Implemented CI/CD and proactive monitoring for data products to improve reliability and minimise incidents.</li>
+<li>Developed SQL warehouses and lakehouse solutions on Azure/AWS; mentored juniors to foster continuous improvement.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="projects">
+<h2>Key Projects</h2>
+<div class="projects-grid">
+<div class="project-card">
+<div class="project-image-wrapper">
+<img alt="ETL Pipeline Optimisation" src="Project1.png"/>
+</div>
+<h3>ETL Pipeline Optimisation</h3>
+<p>Streamlined batch and streaming ETL workflows across Microsoft Fabric, Azure Data Factory and NiFi, reducing processing latency by 40% and accelerating reporting.</p>
+</div>
+<div class="project-card">
+<div class="project-image-wrapper">
+<img alt="Data Lakehouse Implementation" src="project2.png"/>
+</div>
+<h3>Data Lakehouse Implementation</h3>
+<p>Architected a cost‑optimised data lakehouse using Apache Kafka, Hadoop and Snowflake; delivered 30% infrastructure savings and scalable, governed data access.</p>
+</div>
+<div class="project-card">
+<div class="project-image-wrapper">
+<img alt="DataOps &amp; CI/CD" src="Project3.png"/>
+</div>
+<h3>DataOps &amp; CI/CD</h3>
+<p>Instituted DataOps pipelines and CI/CD across ETL workflows; halved deployment cycles and improved reliability through proactive monitoring and automation.</p>
+</div>
+</div>
+</section>
+<section id="skills">
+<h2>Skills</h2>
+<div class="skills-container">
+<!-- Enhanced skills list with emerging and advanced technologies -->
+<div class="skill">
+<span>Data Engineering</span>
+<div class="skill-bar"><div class="skill-level" data-level="95%"></div></div>
+</div>
+<div class="skill">
+<span>ETL &amp; Data Pipelines</span>
+<div class="skill-bar"><div class="skill-level" data-level="90%"></div></div>
+</div>
+<div class="skill">
+<span>Cloud &amp; Data Platforms (Azure, AWS, Snowflake)</span>
+<div class="skill-bar"><div class="skill-level" data-level="90%"></div></div>
+</div>
+<div class="skill">
+<span>Apache Spark &amp; Databricks</span>
+<div class="skill-bar"><div class="skill-level" data-level="85%"></div></div>
+</div>
+<div class="skill">
+<span>SQL, Python &amp; PySpark</span>
+<div class="skill-bar"><div class="skill-level" data-level="92%"></div></div>
+</div>
+<div class="skill">
+<span>Machine Learning &amp; Agentic AI</span>
+<div class="skill-bar"><div class="skill-level" data-level="80%"></div></div>
+</div>
+<div class="skill">
+<span>Vector Databases</span>
+<div class="skill-bar"><div class="skill-level" data-level="70%"></div></div>
+</div>
+<div class="skill">
+<span>DataOps &amp; CI/CD</span>
+<div class="skill-bar"><div class="skill-level" data-level="88%"></div></div>
+</div>
+</div>
+</section>
+<!-- Licenses & Certifications section dynamically summarising key credentials -->
+<section id="licenses">
+<h2>Licenses &amp; Certifications</h2>
+<div class="cert-grid">
+<!-- Confluent Data Streaming Engineer -->
+<div class="cert-card">
+<div class="cert-icon-wrapper">
+<img alt="Confluent Data Streaming" src="confluent.png"/>
+</div>
+<h3>Data Streaming Engineer</h3>
+<p>Confluent certification demonstrating proficiency with Apache Kafka and streaming data pipelines. Credential ID 153657031. Issued Jun 2025 – Expires Jun 2027.</p>
+</div>
+<!-- SnowPro Core Certification -->
+<div class="cert-card">
+<div class="cert-icon-wrapper">
+<img alt="SnowPro Core" src="snowflake.png"/>
+</div>
+<h3>SnowPro Core Certification</h3>
+<p>Snowflake credential validating expertise in Snowflake architecture, data warehousing and cloud data engineering. Credential ID 144446911. Issued May 2025 – Expires May 2027.</p>
+</div>
+<!-- AI & ML specialisations -->
+<div class="cert-card">
+<div class="cert-icon-wrapper">
+<img alt="AI &amp; ML" src="ai_ml.png"/>
+</div>
+<h3>AI &amp; ML Specialisations</h3>
+<p>Completed multi‑course specialisations on Coursera and edX covering self‑driving cars, natural language processing, TensorFlow and time‑series prediction from the University of Toronto and DeepLearning.AI. Demonstrates solid foundations in machine learning and deep learning.</p>
+</div>
+<!-- Cloud & Data Platform certifications -->
+<div class="cert-card">
+<div class="cert-icon-wrapper">
+<img alt="Cloud &amp; Data" src="google_cloud.png"/>
+</div>
+<h3>Cloud &amp; Data Platform Certifications</h3>
+<p>Certified across Azure (AI Fundamentals, Data Fundamentals, Fabric Analytics Engineer and Data Scientist Associate), AWS (Fundamentals, Security, Migration, Serverless &amp; Cloud‑Native) and Google Cloud machine‑learning programmes, demonstrating versatile cloud data expertise.</p>
+</div>
+<!-- Data & Analytics tools -->
+<div class="cert-card">
+<div class="cert-icon-wrapper">
+<img alt="Data &amp; Analytics" src="dbt.png"/>
+</div>
+<h3>Data &amp; Analytics Tools</h3>
+<p>Skilled in dbt fundamentals and a variety of data science and programming courses including Python programming, geospatial analysis, database design, WordPress site development and more—equipping me to deliver end‑to‑end data solutions.</p>
+</div>
+</div>
+</section>
+<!-- Recommendations section showcasing testimonials from mentors, peers and academics -->
+<section id="recommendations">
+<h2>Recommendations</h2>
+<div class="recommendations-grid">
+<!-- Nelson Goh recommendation -->
+<div class="recommendation-card">
+<div class="rec-icon-wrapper">
+<img alt="Nelson Goh" src="profile.png"/>
+</div>
+<h3>Nelson Goh</h3>
+<p class="rec-role">Senior Data Engineer at INX Software (Mentor)</p>
+<p class="rec-text">Madhur’s drive and passion for data science are unmatched. His facial‑recognition project for INX Hack Day 2022 won the Most Innovative prize.</p>
+</div>
+<!-- Satya Prakash recommendation -->
+<div class="recommendation-card">
+<div class="rec-icon-wrapper">
+<img alt="Satya Prakash" src="profile.png"/>
+</div>
+<h3>Satya Prakash</h3>
+<p class="rec-role">Utilities Engineer &amp; Deputy Manager</p>
+<p class="rec-text">A great motivator and exemplary senior who shares knowledge generously. Working with Madhur has been an inspiring learning experience.</p>
+</div>
+<!-- Amin Beheshti recommendation -->
+<div class="recommendation-card">
+<div class="rec-icon-wrapper">
+<img alt="Amin Beheshti" src="profile.png"/>
+</div>
+<h3>Amin Beheshti</h3>
+<p class="rec-role">Professor &amp; Director, Centre for Applied AI</p>
+<p class="rec-text">Madhur’s pristine work ethic and adaptability stood out in my classes at Macquarie University. He goes out of his way to help others.</p>
+</div>
+<!-- Hassan Doosti recommendation -->
+<div class="recommendation-card">
+<div class="rec-icon-wrapper">
+<img alt="Hassan Doosti" src="profile.png"/>
+</div>
+<h3>Hassan Doosti</h3>
+<p class="rec-role">Program Director &amp; Senior Lecturer, Macquarie University</p>
+<p class="rec-text">Knowledgeable, articulate and hardworking, Madhur brought integrity and intelligence to every task during his Master’s programme.</p>
+</div>
+<!-- Vaibhav Rai recommendation -->
+<div class="recommendation-card">
+<div class="rec-icon-wrapper">
+<img alt="Vaibhav Rai" src="profile.png"/>
+</div>
+<h3>Vaibhav Rai</h3>
+<p class="rec-role">Business Analyst &amp; Data Analyst</p>
+<p class="rec-text">Multi‑talented and enthusiastic, he’s always eager to learn and implement new technologies and to lend a helping hand.</p>
+</div>
+<!-- Gaurav Gupta recommendation -->
+<div class="recommendation-card">
+<div class="rec-icon-wrapper">
+<img alt="Gaurav Gupta" src="profile.png"/>
+</div>
+<h3>Gaurav Gupta</h3>
+<p class="rec-role">Director of Education, Macquarie University</p>
+<p class="rec-text">One of the hardest‑working students I’ve taught; Madhur combines perseverance with honed analytical skills to achieve great results.</p>
+</div>
+<!-- Er. Gurupreet Singh recommendation -->
+<div class="recommendation-card">
+<div class="rec-icon-wrapper">
+<img alt="Er Gurupreet Singh" src="profile.png"/>
+</div>
+<h3>Er. Gurupreet Singh</h3>
+<p class="rec-role">Pre‑owned Vehicle Ecosystem Leader</p>
+<p class="rec-text">A tech geek with an innovative mind and a gifted writer, he’s equipped with the right tools and mindset to excel.</p>
+</div>
+<!-- Paras Sarna recommendation -->
+<div class="recommendation-card">
+<div class="rec-icon-wrapper">
+<img alt="Paras Sarna" src="profile.png"/>
+</div>
+<h3>Paras Sarna</h3>
+<p class="rec-role">Full‑Stack Developer</p>
+<p class="rec-text">Can step into any area and conquer it; always learning new technologies and ready to support others.</p>
+</div>
+</div>
+</section>
+<!-- Awards section split out from certifications -->
+<section id="awards">
+<h2>Awards &amp; Achievements</h2>
+<ul>
+<li>Most Ambitious Project – INX Hack Day (Facial Recognition Attendance System)</li>
+<li>First Prize – Project Exhibition at Guru Nanak Institute of Technology</li>
+</ul>
+</section>
+<section id="contact">
+<h2>Contact</h2>
+<p>Interested in collaborating or discussing data engineering challenges? Feel free to reach out.</p>
+<ul class="contact-info">
+<li>Email: <a href="mailto:madhur@example.com">madhur@example.com</a></li>
+<li>LinkedIn: <a href="https://www.linkedin.com/in/madhur-sabherwal/" target="_blank">linkedin.com/in/madhur-sabherwal</a></li>
+</ul>
 </section>
 
-        <!-- Licenses & Certifications section moved below the Skills section -->
-        <!-- Licenses & Certifications placeholder removed: will be inserted after Skills section -->
-        <section id="services">
-            <h2>Core Capabilities</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon-wrapper">
-                        <img src="service1.png" alt="Data Architecture Icon">
-                    </div>
-                    <h3>Data Architecture</h3>
-                    <p>Design scalable, secure data platforms and pipelines from ingestion to consumption, delivering real‑time insights and strategic value.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon-wrapper">
-                        <img src="service2.png" alt="Data Governance Icon">
-                    </div>
-                    <h3>Data Governance</h3>
-                    <p>Implement robust governance frameworks, elevating data quality and compliance while maintaining lineage and auditability.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon-wrapper">
-                        <img src="service3.png" alt="Cloud Solutions Icon">
-                    </div>
-                    <h3>Cloud Solutions</h3>
-                    <p>Architect and optimise cloud‑native data solutions on Azure, AWS and Snowflake, delivering cost‑effective scalability and performance.</p>
-                </div>
-            </div>
-        </section>
-        <section id="experience">
-            <h2>Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Data Engineer – BGC (Australia) Pty Ltd</h3>
-                        <span class="date">Jan 2023 – Present</span>
-                        <ul>
-                            <li>Streamlined ETL pipelines across Microsoft Fabric, Azure Data Factory and NiFi, reducing batch processing latency by 40% and accelerating time‑to‑insight.</li>
-                            <li>Built a cost‑optimised data lakehouse using Apache Kafka, Hadoop and Snowflake, cutting infrastructure costs by 30% and ensuring governance.</li>
-                            <li>Implemented data quality and governance checks that increased compliance from 85% to 98% and improved auditability.</li>
-                            <li>Delivered enterprise‑grade data warehouse and real‑time integrations with high‑volume systems; designed dashboards with optimised SQL for a 35% performance lift.</li>
-                            <li>Led proof‑of‑concepts (Fivetran/Airflow) and mentored engineers to elevate organisational data maturity.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <h3>Associate Data Engineer – INX Software</h3>
-                        <span class="date">Jan 2022 – Jan 2023</span>
-                        <ul>
-                            <li>Standardised and automated data workflows across teams using DataOps principles; cut deployment cycles by 50%.</li>
-                            <li>Built and maintained cloud‑native ETL pipelines with Python, DBT and Snowflake, slashing processing times by 90% and reducing costs.</li>
-                            <li>Integrated data from mining and workforce systems, enabling advanced analytics while ensuring data accuracy and compliance.</li>
-                            <li>Implemented CI/CD and proactive monitoring for data products to improve reliability and minimise incidents.</li>
-                            <li>Developed SQL warehouses and lakehouse solutions on Azure/AWS; mentored juniors to foster continuous improvement.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section id="projects">
-            <h2>Key Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-image-wrapper">
-                        <img src="Project1.png" alt="ETL Pipeline Optimisation">
-                    </div>
-                    <h3>ETL Pipeline Optimisation</h3>
-                    <p>Streamlined batch and streaming ETL workflows across Microsoft Fabric, Azure Data Factory and NiFi, reducing processing latency by 40% and accelerating reporting.</p>
-                </div>
-                <div class="project-card">
-                    <div class="project-image-wrapper">
-                        <img src="project2.png" alt="Data Lakehouse Implementation">
-                    </div>
-                    <h3>Data Lakehouse Implementation</h3>
-                    <p>Architected a cost‑optimised data lakehouse using Apache Kafka, Hadoop and Snowflake; delivered 30% infrastructure savings and scalable, governed data access.</p>
-                </div>
-                <div class="project-card">
-                    <div class="project-image-wrapper">
-                        <img src="Project3.png" alt="DataOps &amp; CI/CD">
-                    </div>
-                    <h3>DataOps &amp; CI/CD</h3>
-                    <p>Instituted DataOps pipelines and CI/CD across ETL workflows; halved deployment cycles and improved reliability through proactive monitoring and automation.</p>
-                </div>
-            </div>
-        </section>
-        <section id="skills">
-            <h2>Skills</h2>
-            <div class="skills-container">
-                <!-- Enhanced skills list with emerging and advanced technologies -->
-                <div class="skill">
-                    <span>Data Engineering</span>
-                    <div class="skill-bar"><div class="skill-level" data-level="95%"></div></div>
-                </div>
-                <div class="skill">
-                    <span>ETL &amp; Data Pipelines</span>
-                    <div class="skill-bar"><div class="skill-level" data-level="90%"></div></div>
-                </div>
-                <div class="skill">
-                    <span>Cloud &amp; Data Platforms (Azure, AWS, Snowflake)</span>
-                    <div class="skill-bar"><div class="skill-level" data-level="90%"></div></div>
-                </div>
-                <div class="skill">
-                    <span>Apache Spark &amp; Databricks</span>
-                    <div class="skill-bar"><div class="skill-level" data-level="85%"></div></div>
-                </div>
-                <div class="skill">
-                    <span>SQL, Python &amp; PySpark</span>
-                    <div class="skill-bar"><div class="skill-level" data-level="92%"></div></div>
-                </div>
-                <div class="skill">
-                    <span>Machine Learning &amp; Agentic AI</span>
-                    <div class="skill-bar"><div class="skill-level" data-level="80%"></div></div>
-                </div>
-                <div class="skill">
-                    <span>Vector Databases</span>
-                    <div class="skill-bar"><div class="skill-level" data-level="70%"></div></div>
-                </div>
-                <div class="skill">
-                    <span>DataOps &amp; CI/CD</span>
-                    <div class="skill-bar"><div class="skill-level" data-level="88%"></div></div>
-                </div>
-            </div>
-        </section>
-        <!-- Licenses & Certifications section dynamically summarising key credentials -->
-        <section id="licenses">
-            <h2>Licenses &amp; Certifications</h2>
-            <div class="cert-grid">
-                <!-- Confluent Data Streaming Engineer -->
-                <div class="cert-card">
-                    <div class="cert-icon-wrapper">
-                        <img src="confluent.png" alt="Confluent Data Streaming">
-                    </div>
-                    <h3>Data Streaming Engineer</h3>
-                    <p>Confluent certification demonstrating proficiency with Apache Kafka and streaming data pipelines. Credential ID 153657031. Issued Jun&nbsp;2025 – Expires Jun&nbsp;2027.</p>
-                </div>
-                <!-- SnowPro Core Certification -->
-                <div class="cert-card">
-                    <div class="cert-icon-wrapper">
-                        <img src="snowflake.png" alt="SnowPro Core">
-                    </div>
-                    <h3>SnowPro Core Certification</h3>
-                    <p>Snowflake credential validating expertise in Snowflake architecture, data warehousing and cloud data engineering. Credential ID 144446911. Issued May&nbsp;2025 – Expires May&nbsp;2027.</p>
-                </div>
-                <!-- AI & ML specialisations -->
-                <div class="cert-card">
-                    <div class="cert-icon-wrapper">
-                        <img src="ai_ml.png" alt="AI &amp; ML">
-                    </div>
-                    <h3>AI &amp; ML Specialisations</h3>
-                    <p>Completed multi‑course specialisations on Coursera and edX covering self‑driving cars, natural language processing, TensorFlow and time‑series prediction from the University of Toronto and DeepLearning.AI. Demonstrates solid foundations in machine learning and deep learning.</p>
-                </div>
-                <!-- Cloud & Data Platform certifications -->
-                <div class="cert-card">
-                    <div class="cert-icon-wrapper">
-                        <img src="google_cloud.png" alt="Cloud &amp; Data">
-                    </div>
-                    <h3>Cloud &amp; Data Platform Certifications</h3>
-                    <p>Certified across Azure (AI Fundamentals, Data Fundamentals, Fabric Analytics Engineer and Data Scientist Associate), AWS (Fundamentals, Security, Migration, Serverless &amp; Cloud‑Native) and Google Cloud machine‑learning programmes, demonstrating versatile cloud data expertise.</p>
-                </div>
-                <!-- Data & Analytics tools -->
-                <div class="cert-card">
-                    <div class="cert-icon-wrapper">
-                        <img src="dbt.png" alt="Data &amp; Analytics">
-                    </div>
-                    <h3>Data &amp; Analytics Tools</h3>
-                    <p>Skilled in dbt fundamentals and a variety of data science and programming courses including Python programming, geospatial analysis, database design, WordPress site development and more—equipping me to deliver end‑to‑end data solutions.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Recommendations section showcasing testimonials from mentors, peers and academics -->
-        <section id="recommendations">
-            <h2>Recommendations</h2>
-            <div class="recommendations-grid">
-                <!-- Nelson Goh recommendation -->
-                <div class="recommendation-card">
-                    <div class="rec-icon-wrapper">
-                        <img src="profile.png" alt="Nelson Goh">
-                    </div>
-                    <h3>Nelson Goh</h3>
-                    <p class="rec-role">Senior Data Engineer at INX Software (Mentor)</p>
-                    <p class="rec-text">Madhur’s drive and passion for data science are unmatched. His facial‑recognition project for INX Hack Day 2022 won the Most Innovative prize.</p>
-                </div>
-                <!-- Satya Prakash recommendation -->
-                <div class="recommendation-card">
-                    <div class="rec-icon-wrapper">
-                        <img src="profile.png" alt="Satya Prakash">
-                    </div>
-                    <h3>Satya Prakash</h3>
-                    <p class="rec-role">Utilities Engineer &amp; Deputy Manager</p>
-                    <p class="rec-text">A great motivator and exemplary senior who shares knowledge generously. Working with Madhur has been an inspiring learning experience.</p>
-                </div>
-                <!-- Amin Beheshti recommendation -->
-                <div class="recommendation-card">
-                    <div class="rec-icon-wrapper">
-                        <img src="profile.png" alt="Amin Beheshti">
-                    </div>
-                    <h3>Amin Beheshti</h3>
-                    <p class="rec-role">Professor &amp; Director, Centre for Applied AI</p>
-                    <p class="rec-text">Madhur’s pristine work ethic and adaptability stood out in my classes at Macquarie University. He goes out of his way to help others.</p>
-                </div>
-                <!-- Hassan Doosti recommendation -->
-                <div class="recommendation-card">
-                    <div class="rec-icon-wrapper">
-                        <img src="profile.png" alt="Hassan Doosti">
-                    </div>
-                    <h3>Hassan Doosti</h3>
-                    <p class="rec-role">Program Director &amp; Senior Lecturer, Macquarie University</p>
-                    <p class="rec-text">Knowledgeable, articulate and hardworking, Madhur brought integrity and intelligence to every task during his Master’s programme.</p>
-                </div>
-                <!-- Vaibhav Rai recommendation -->
-                <div class="recommendation-card">
-                    <div class="rec-icon-wrapper">
-                        <img src="profile.png" alt="Vaibhav Rai">
-                    </div>
-                    <h3>Vaibhav Rai</h3>
-                    <p class="rec-role">Business Analyst &amp; Data Analyst</p>
-                    <p class="rec-text">Multi‑talented and enthusiastic, he’s always eager to learn and implement new technologies and to lend a helping hand.</p>
-                </div>
-                <!-- Gaurav Gupta recommendation -->
-                <div class="recommendation-card">
-                    <div class="rec-icon-wrapper">
-                        <img src="profile.png" alt="Gaurav Gupta">
-                    </div>
-                    <h3>Gaurav Gupta</h3>
-                    <p class="rec-role">Director of Education, Macquarie University</p>
-                    <p class="rec-text">One of the hardest‑working students I’ve taught; Madhur combines perseverance with honed analytical skills to achieve great results.</p>
-                </div>
-                <!-- Er. Gurupreet Singh recommendation -->
-                <div class="recommendation-card">
-                    <div class="rec-icon-wrapper">
-                        <img src="profile.png" alt="Er Gurupreet Singh">
-                    </div>
-                    <h3>Er. Gurupreet Singh</h3>
-                    <p class="rec-role">Pre‑owned Vehicle Ecosystem Leader</p>
-                    <p class="rec-text">A tech geek with an innovative mind and a gifted writer, he’s equipped with the right tools and mindset to excel.</p>
-                </div>
-                <!-- Paras Sarna recommendation -->
-                <div class="recommendation-card">
-                    <div class="rec-icon-wrapper">
-                        <img src="profile.png" alt="Paras Sarna">
-                    </div>
-                    <h3>Paras Sarna</h3>
-                    <p class="rec-role">Full‑Stack Developer</p>
-                    <p class="rec-text">Can step into any area and conquer it; always learning new technologies and ready to support others.</p>
-                </div>
-            </div>
-        </section>
-
-        <!-- Awards section split out from certifications -->
-        <section id="awards">
-            <h2>Awards &amp; Achievements</h2>
-            <ul>
-                <li>Most Ambitious Project – INX Hack Day (Facial Recognition Attendance System)</li>
-                <li>First Prize – Project Exhibition at Guru Nanak Institute of Technology</li>
-            </ul>
-        </section>
-        <section id="contact">
-            <h2>Contact</h2>
-            <p>Interested in collaborating or discussing data engineering challenges? Feel free to reach out.</p>
-            <ul class="contact-info">
-                <li>Email: <a href="mailto:madhur@example.com">madhur@example.com</a></li>
-                <li>LinkedIn: <a href="https://www.linkedin.com/in/madhur-sabherwal/" target="_blank">linkedin.com/in/madhur-sabherwal</a></li>
-            </ul>
-        </section>
-    </main>
-    <footer>
-        <p>&copy; 2025 Madhur Sabherwal. All rights reserved.</p>
-    </footer>
-    <!-- Typed text effect script -->
-    <script>
+<footer>
+<p>© 2025 Madhur Sabherwal. All rights reserved.</p>
+</footer>
+<!-- Typed text effect script -->
+<script>
         // Typed effect for hero tagline
         const phrases = [
             // Expanded phrases to reflect cutting‑edge topics in data and AI
