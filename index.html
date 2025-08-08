@@ -17,14 +17,14 @@
     }
     /* Colour palette for monochromatic, professional feel */
     :root {
-        --bg: #f7f7f7;
-        --primary: #333333;
-        --secondary: #555555;
-        --accent: #888888;
+        --bg: #f5f7fa;
+        --primary: #0a192f; /* deep navy */
+        --secondary: #4169e1; /* cobalt */
+        --accent: #c7d7f7; /* light cobalt for subtle accents */
         --card-bg: #ffffff;
-        --card-border: #dddddd;
-        --text: #333333;
-        --text-muted: #666666;
+        --card-border: #e2e8f0;
+        --text: #0a192f;
+        --text-muted: #536b86;
     }
     body {
         font-family: 'Poppins', sans-serif;
@@ -400,6 +400,21 @@
         line-height: 1.4;
     }
 
+    /* Facts container for rotating data engineering facts */
+    .facts-container {
+        margin-top: 20px;
+        text-align: center;
+        font-size: 0.9rem;
+        color: var(--secondary);
+        background: var(--card-bg);
+        border: 1px solid var(--card-border);
+        border-radius: 12px;
+        padding: 12px 24px;
+        max-width: 700px;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
     /* Recommendations */
     #recommendations {
         margin-top: 40px;
@@ -545,9 +560,13 @@
             </div>
             <div class="hero-right">
                 <div class="hero-image-wrapper">
-                    <img src="images/illustration.png" alt="Data Engineer Illustration">
+                    <img src="illustration.png" alt="Data Engineer Illustration">
                 </div>
             </div>
+        </div>
+        <!-- Dynamic facts about data engineering -->
+        <div id="facts-container" class="facts-container">
+            <span id="fact-text"></span>
         </div>
     </header>
     <main>
@@ -564,21 +583,21 @@
             <div class="services-grid">
                 <div class="service-card">
                     <div class="service-icon-wrapper">
-                        <img src="images/service1.png" alt="Data Architecture Icon">
+                        <img src="service1.png" alt="Data Architecture Icon">
                     </div>
                     <h3>Data Architecture</h3>
                     <p>Design scalable, secure data platforms and pipelines from ingestion to consumption, delivering real‑time insights and strategic value.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon-wrapper">
-                        <img src="images/service2.png" alt="Data Governance Icon">
+                        <img src="service2.png" alt="Data Governance Icon">
                     </div>
                     <h3>Data Governance</h3>
                     <p>Implement robust governance frameworks, elevating data quality and compliance while maintaining lineage and auditability.</p>
                 </div>
                 <div class="service-card">
                     <div class="service-icon-wrapper">
-                        <img src="images/service3.png" alt="Cloud Solutions Icon">
+                        <img src="service3.png" alt="Cloud Solutions Icon">
                     </div>
                     <h3>Cloud Solutions</h3>
                     <p>Architect and optimise cloud‑native data solutions on Azure, AWS and Snowflake, delivering cost‑effective scalability and performance.</p>
@@ -621,21 +640,21 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image-wrapper">
-                        <img src="images/project1.png" alt="ETL Pipeline Optimisation">
+                        <img src="project1.png" alt="ETL Pipeline Optimisation">
                     </div>
                     <h3>ETL Pipeline Optimisation</h3>
                     <p>Streamlined batch and streaming ETL workflows across Microsoft Fabric, Azure Data Factory and NiFi, reducing processing latency by 40% and accelerating reporting.</p>
                 </div>
                 <div class="project-card">
                     <div class="project-image-wrapper">
-                        <img src="images/project2.png" alt="Data Lakehouse Implementation">
+                        <img src="project2.png" alt="Data Lakehouse Implementation">
                     </div>
                     <h3>Data Lakehouse Implementation</h3>
                     <p>Architected a cost‑optimised data lakehouse using Apache Kafka, Hadoop and Snowflake; delivered 30% infrastructure savings and scalable, governed data access.</p>
                 </div>
                 <div class="project-card">
                     <div class="project-image-wrapper">
-                        <img src="images/project3.png" alt="DataOps &amp; CI/CD">
+                        <img src="project3.png" alt="DataOps &amp; CI/CD">
                     </div>
                     <h3>DataOps &amp; CI/CD</h3>
                     <p>Instituted DataOps pipelines and CI/CD across ETL workflows; halved deployment cycles and improved reliability through proactive monitoring and automation.</p>
@@ -687,7 +706,7 @@
                 <!-- Confluent Data Streaming Engineer -->
                 <div class="cert-card">
                     <div class="cert-icon-wrapper">
-                        <img src="images/confluent.png" alt="Confluent Data Streaming">
+                        <img src="confluent.png" alt="Confluent Data Streaming">
                     </div>
                     <h3>Data Streaming Engineer</h3>
                     <p>Confluent certification demonstrating proficiency with Apache Kafka and streaming data pipelines. Credential ID 153657031. Issued Jun&nbsp;2025 – Expires Jun&nbsp;2027.</p>
@@ -695,7 +714,7 @@
                 <!-- SnowPro Core Certification -->
                 <div class="cert-card">
                     <div class="cert-icon-wrapper">
-                        <img src="images/snowflake.png" alt="SnowPro Core">
+                        <img src="snowflake.png" alt="SnowPro Core">
                     </div>
                     <h3>SnowPro Core Certification</h3>
                     <p>Snowflake credential validating expertise in Snowflake architecture, data warehousing and cloud data engineering. Credential ID 144446911. Issued May&nbsp;2025 – Expires May&nbsp;2027.</p>
@@ -703,7 +722,7 @@
                 <!-- AI & ML specialisations -->
                 <div class="cert-card">
                     <div class="cert-icon-wrapper">
-                        <img src="images/ai_ml.png" alt="AI &amp; ML">
+                        <img src="ai_ml.png" alt="AI &amp; ML">
                     </div>
                     <h3>AI &amp; ML Specialisations</h3>
                     <p>Completed multi‑course specialisations on Coursera and edX covering self‑driving cars, natural language processing, TensorFlow and time‑series prediction from the University of Toronto and DeepLearning.AI. Demonstrates solid foundations in machine learning and deep learning.</p>
@@ -711,7 +730,7 @@
                 <!-- Cloud & Data Platform certifications -->
                 <div class="cert-card">
                     <div class="cert-icon-wrapper">
-                        <img src="images/google_cloud.png" alt="Cloud &amp; Data">
+                        <img src="google_cloud.png" alt="Cloud &amp; Data">
                     </div>
                     <h3>Cloud &amp; Data Platform Certifications</h3>
                     <p>Certified across Azure (AI Fundamentals, Data Fundamentals, Fabric Analytics Engineer and Data Scientist Associate), AWS (Fundamentals, Security, Migration, Serverless &amp; Cloud‑Native) and Google Cloud machine‑learning programmes, demonstrating versatile cloud data expertise.</p>
@@ -719,7 +738,7 @@
                 <!-- Data & Analytics tools -->
                 <div class="cert-card">
                     <div class="cert-icon-wrapper">
-                        <img src="images/dbt.png" alt="Data &amp; Analytics">
+                        <img src="dbt.png" alt="Data &amp; Analytics">
                     </div>
                     <h3>Data &amp; Analytics Tools</h3>
                     <p>Skilled in dbt fundamentals and a variety of data science and programming courses including Python programming, geospatial analysis, database design, WordPress site development and more—equipping me to deliver end‑to‑end data solutions.</p>
@@ -734,7 +753,7 @@
                 <!-- Nelson Goh recommendation -->
                 <div class="recommendation-card">
                     <div class="rec-icon-wrapper">
-                        <img src="images/profile.png" alt="Nelson Goh">
+                        <img src="profile.png" alt="Nelson Goh">
                     </div>
                     <h3>Nelson Goh</h3>
                     <p class="rec-role">Senior Data Engineer at INX Software (Mentor)</p>
@@ -743,7 +762,7 @@
                 <!-- Satya Prakash recommendation -->
                 <div class="recommendation-card">
                     <div class="rec-icon-wrapper">
-                        <img src="images/profile.png" alt="Satya Prakash">
+                        <img src="profile.png" alt="Satya Prakash">
                     </div>
                     <h3>Satya Prakash</h3>
                     <p class="rec-role">Utilities Engineer &amp; Deputy Manager</p>
@@ -752,7 +771,7 @@
                 <!-- Amin Beheshti recommendation -->
                 <div class="recommendation-card">
                     <div class="rec-icon-wrapper">
-                        <img src="images/profile.png" alt="Amin Beheshti">
+                        <img src="profile.png" alt="Amin Beheshti">
                     </div>
                     <h3>Amin Beheshti</h3>
                     <p class="rec-role">Professor &amp; Director, Centre for Applied AI</p>
@@ -761,7 +780,7 @@
                 <!-- Hassan Doosti recommendation -->
                 <div class="recommendation-card">
                     <div class="rec-icon-wrapper">
-                        <img src="images/profile.png" alt="Hassan Doosti">
+                        <img src="profile.png" alt="Hassan Doosti">
                     </div>
                     <h3>Hassan Doosti</h3>
                     <p class="rec-role">Program Director &amp; Senior Lecturer, Macquarie University</p>
@@ -770,7 +789,7 @@
                 <!-- Vaibhav Rai recommendation -->
                 <div class="recommendation-card">
                     <div class="rec-icon-wrapper">
-                        <img src="images/profile.png" alt="Vaibhav Rai">
+                        <img src="profile.png" alt="Vaibhav Rai">
                     </div>
                     <h3>Vaibhav Rai</h3>
                     <p class="rec-role">Business Analyst &amp; Data Analyst</p>
@@ -779,7 +798,7 @@
                 <!-- Gaurav Gupta recommendation -->
                 <div class="recommendation-card">
                     <div class="rec-icon-wrapper">
-                        <img src="images/profile.png" alt="Gaurav Gupta">
+                        <img src="profile.png" alt="Gaurav Gupta">
                     </div>
                     <h3>Gaurav Gupta</h3>
                     <p class="rec-role">Director of Education, Macquarie University</p>
@@ -788,7 +807,7 @@
                 <!-- Er. Gurupreet Singh recommendation -->
                 <div class="recommendation-card">
                     <div class="rec-icon-wrapper">
-                        <img src="images/profile.png" alt="Er Gurupreet Singh">
+                        <img src="profile.png" alt="Er Gurupreet Singh">
                     </div>
                     <h3>Er. Gurupreet Singh</h3>
                     <p class="rec-role">Pre‑owned Vehicle Ecosystem Leader</p>
@@ -797,7 +816,7 @@
                 <!-- Paras Sarna recommendation -->
                 <div class="recommendation-card">
                     <div class="rec-icon-wrapper">
-                        <img src="images/profile.png" alt="Paras Sarna">
+                        <img src="profile.png" alt="Paras Sarna">
                     </div>
                     <h3>Paras Sarna</h3>
                     <p class="rec-role">Full‑Stack Developer</p>
@@ -818,7 +837,7 @@
             <h2>Contact</h2>
             <p>Interested in collaborating or discussing data engineering challenges? Feel free to reach out.</p>
             <ul class="contact-info">
-                <li>Email: <a href="mailto:madhursabherwal1230@gmail.com">madhur@example.com</a></li>
+                <li>Email: <a href="mailto:madhur@example.com">madhur@example.com</a></li>
                 <li>LinkedIn: <a href="https://www.linkedin.com/in/madhur-sabherwal/" target="_blank">linkedin.com/in/madhur-sabherwal</a></li>
             </ul>
         </section>
@@ -873,6 +892,24 @@
             setTimeout(typeLoop, currentLetterIndex === phrases[currentPhraseIndex].length && !isDeleting ? pauseAfterEnd : typingSpeed);
         }
         document.addEventListener('DOMContentLoaded', typeLoop);
+
+        // Random facts about data engineering (rotating)
+        const facts = [
+            "In 2025, the world will generate 181 zettabytes of data and create 2.5 quintillion bytes each day【592963331983811†L62-L65】.",
+            "Over 97% of businesses have invested in Big Data, yet only 40% use analytics effectively【592963331983811†L66-L68】.",
+            "90% of the world’s data has been created in the last two years【592963331983811†L97-L99】.",
+            "The Big Data analytics market is projected to reach $924.39 billion by 2032【592963331983811†L66-L68】."
+        ];
+        let factIndex = 0;
+        function displayFact() {
+            const factTextElem = document.getElementById('fact-text');
+            if (factTextElem) {
+                factTextElem.textContent = facts[factIndex];
+                factIndex = (factIndex + 1) % facts.length;
+            }
+        }
+        setInterval(displayFact, 10000);
+        document.addEventListener('DOMContentLoaded', displayFact);
     </script>
 </body>
 </html>
