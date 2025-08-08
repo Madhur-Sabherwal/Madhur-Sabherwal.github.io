@@ -527,13 +527,171 @@ section:hover, .project-card:hover, .cert-card:hover, .recommendation-card:hover
     border-radius: 16px;
     padding: 20px;
 }
+
+/* Enhanced navigation styling */
+nav {
+    background: linear-gradient(to right, #0a192f, #1e3a8a);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+nav .logo {
+    color: #ffffff;
+}
+
+nav ul li a {
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.15);
+    color: #facc15;
+}
+
+/* Modernized colorful skill bars (corporate feel) */
+.skills-container .skill:nth-child(1) .skill-level {
+    background: linear-gradient(90deg, #1e3c72, #2a5298); /* Navy blue */
+}
+.skills-container .skill:nth-child(2) .skill-level {
+    background: linear-gradient(90deg, #3b6978, #204051); /* Slate blue */
+}
+.skills-container .skill:nth-child(3) .skill-level {
+    background: linear-gradient(90deg, #003973, #e5e5be); /* Royal to Beige */
+}
+.skills-container .skill:nth-child(4) .skill-level {
+    background: linear-gradient(90deg, #3a1c71, #d76d77, #ffaf7b); /* Professional purple */
+}
+.skills-container .skill:nth-child(5) .skill-level {
+    background: linear-gradient(90deg, #005c97, #363795); /* Indigo-blue */
+}
+.skills-container .skill:nth-child(6) .skill-level {
+    background: linear-gradient(90deg, #00b09b, #96c93d); /* Teal to lime */
+}
+.skills-container .skill:nth-child(7) .skill-level {
+    background: linear-gradient(90deg, #8e44ad, #c0392b); /* Purple to red */
+}
+.skills-container .skill:nth-child(8) .skill-level {
+    background: linear-gradient(90deg, #2980b9, #6dd5fa); /* Blue gradient */
+}
+
+/* Ensure logo and links align in a single row */
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav .logo {
+    flex-shrink: 0;
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #ffffff;
+    line-height: 1.2;
+    white-space: nowrap;
+}
+
+nav ul {
+    flex-grow: 1;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+/* Hamburger Menu Styles */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  cursor: pointer;
+  margin-left: auto;
+}
+.bar {
+  height: 3px;
+  width: 25px;
+  background-color: #ffffff;
+  margin: 4px 0;
+  transition: all 0.3s ease;
+}
+@media (max-width: 768px) {
+  .hamburger {
+    display: flex;
+  }
+  nav ul.nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #0a192f;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 20px;
+    z-index: 99;
+  }
+  nav ul.nav-links.active {
+    display: flex;
+  }
+  nav ul.nav-links li {
+    margin: 10px 0;
+  }
+}
+
+nav {
+    background: linear-gradient(to right, #0a192f, #34495e); /* Dark navy to muted slate blue */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+@media (max-width: 1200px) {
+    nav ul.nav-links {
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+nav ul {
+    gap: 14px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+@media (max-width: 1200px) {
+    nav ul.nav-links {
+        justify-content: flex-start;
+    }
+}
 </style>
-<meta content="Madhur Sabherwal is a results-driven Data Engineer specializing in Microsoft Fabric, Azure, Snowflake, and emerging AI technologies. Explore his projects, skills, and certifications." name="description"/><link href="https://madhur-sabherwal.github.io/" rel="canonical"/><meta content="Madhur Sabherwal | Data Engineer Portfolio" property="og:title"/><meta content="Madhur Sabherwal is a results-driven Data Engineer specializing in Microsoft Fabric, Azure, Snowflake, and emerging AI technologies. Explore his projects, skills, and certifications." property="og:description"/><meta content="https://madhur-sabherwal.github.io/" property="og:url"/><meta content="website" property="og:type"/></head>
+<meta content="Madhur Sabherwal is a results-driven Data Engineer specializing in Microsoft Fabric, Azure, Snowflake, and emerging AI technologies. Explore his projects, skills, and certifications." name="description"/><link href="https://madhur-sabherwal.github.io/" rel="canonical"/><meta content="Madhur Sabherwal | Data Engineer Portfolio" property="og:title"/><meta content="Madhur Sabherwal is a results-driven Data Engineer specializing in Microsoft Fabric, Azure, Snowflake, and emerging AI technologies. Explore his projects, skills, and certifications." property="og:description"/><meta content="https://madhur-sabherwal.github.io/" property="og:url"/><meta content="website" property="og:type"/>
+<!-- Google Analytics -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-XXXXXXX');
+</script>
+<!-- LinkedIn Insight Tag -->
+<script type="text/javascript">
+(function(){var s = document.getElementsByTagName("script")[0];
+var b = document.createElement("script");
+b.type = "text/javascript";b.async = true;
+b.src = "https://snap.licdn.com/li.lms-analytics/insight.min.js";
+s.parentNode.insertBefore(b, s);})();
+</script>
+<noscript>
+<img alt="" height="1" src="https://px.ads.linkedin.com/collect/?pid=XXXXXX&amp;fmt=gif" style="display:none;" width="1"/>
+</noscript>
+</head>
 <body>
 <nav>
+<div class="hamburger" onclick="toggleMobileMenu()">
+<div class="bar"></div>
+<div class="bar"></div>
+<div class="bar"></div>
+</div>
 <div class="logo">Madhur Sabherwal</div>
 <ul class="nav-links">
-<li><a href="#about">About</a></li>
+<li><a href="#hire">Hire Me</a></li><li><a href="#about">About</a></li>
 <li><a href="#experience">Experience</a></li>
 <li><a href="https://github.com/madhur-sabherwal" target="_blank">GitHub Repo</a></li>
 <li><a href="#skills">Skills</a></li>
@@ -542,7 +700,7 @@ section:hover, .project-card:hover, .cert-card:hover, .recommendation-card:hover
 <li><a href="#recommendations">Recommendations</a></li>
 <li><a href="#awards">Awards</a></li>
 <li><a href="#contact">Contact</a></li>
-</ul>
+<li><a href="https://www.linkedin.com/newsletters/7171155350795091968/" target="_blank">Blog</a></li></ul>
 </nav>
 <header id="home">
 <div class="hero-container">
@@ -629,35 +787,35 @@ section:hover, .project-card:hover, .cert-card:hover, .recommendation-card:hover
 <div class="skills-container">
 <!-- Enhanced skills list with emerging and advanced technologies -->
 <div class="skill">
-<span>Data Engineering</span>
+<span>Data Engineering &amp; Lakehouse Architecture</span>
 <div class="skill-bar"><div class="skill-level" data-level="95%"></div></div>
 </div>
 <div class="skill">
-<span>ETL &amp; Data Pipelines</span>
+<span>ETL Pipelines (ADF, NiFi, Fabric)</span>
 <div class="skill-bar"><div class="skill-level" data-level="90%"></div></div>
 </div>
 <div class="skill">
-<span>Cloud &amp; Data Platforms (Azure, AWS, Snowflake)</span>
+<span>Cloud Platforms: Azure, AWS, Snowflake</span>
 <div class="skill-bar"><div class="skill-level" data-level="90%"></div></div>
 </div>
 <div class="skill">
-<span>Apache Spark &amp; Databricks</span>
+<span>Apache Spark, Databricks &amp; Delta Lake</span>
 <div class="skill-bar"><div class="skill-level" data-level="85%"></div></div>
 </div>
 <div class="skill">
-<span>SQL, Python &amp; PySpark</span>
+<span>SQL, Python, PySpark (Advanced Analytics)</span>
 <div class="skill-bar"><div class="skill-level" data-level="92%"></div></div>
 </div>
 <div class="skill">
-<span>Machine Learning &amp; Agentic AI</span>
+<span>Machine Learning, LLMs &amp; Agentic AI</span>
 <div class="skill-bar"><div class="skill-level" data-level="80%"></div></div>
 </div>
 <div class="skill">
-<span>Vector Databases</span>
+<span>Vector DBs (FAISS, Pinecone, ChromaDB)</span>
 <div class="skill-bar"><div class="skill-level" data-level="70%"></div></div>
 </div>
 <div class="skill">
-<span>DataOps &amp; CI/CD</span>
+<span>DataOps, CI/CD &amp; Data Observability</span>
 <div class="skill-bar"><div class="skill-level" data-level="88%"></div></div>
 </div>
 </div>
@@ -794,11 +952,26 @@ section:hover, .project-card:hover, .cert-card:hover, .recommendation-card:hover
 <li>First Prize – Project Exhibition at Guru Nanak Institute of Technology</li>
 </ul>
 </section>
-<section id="contact">
+<section id="hire">
+<h2>Hire Me</h2>
+<p>I'm currently open to both freelance and full-time opportunities. I specialize in building modern data solutions—from pipelines and lakehouses to real-time dashboards and AI integrations.</p>
+<ul>
+<li>✔ Contract &amp; freelance: Available up to 20 hrs/week</li>
+<li>✔ Full-time: Open to hybrid or remote roles</li>
+<li>✔ Tech stack: Azure, Fabric, Snowflake, Databricks, NiFi, PySpark, Power BI</li>
+</ul>
+<p><a class="cta" href="#contact">Contact Me</a> or <a class="cta" href="https://calendly.com/madhursabherwal1230/30min" target="_blank">Book a Call</a></p>
+</section><section id="contact">
 <h2>Contact</h2>
 <p>Interested in collaborating or discussing data engineering challenges? Feel free to reach out.</p>
+<form action="https://formspree.io/f/xeozpwwg" method="POST" style="margin-top:20px;">
+<input name="name" placeholder="Your Name" required="" style="width:100%;padding:10px;margin-bottom:10px;border-radius:8px;border:1px solid #ccc;" type="text"/>
+<input name="email" placeholder="Your Email" required="" style="width:100%;padding:10px;margin-bottom:10px;border-radius:8px;border:1px solid #ccc;" type="email"/>
+<textarea name="message" placeholder="Your Message" required="" rows="5" style="width:100%;padding:10px;border-radius:8px;border:1px solid #ccc;"></textarea>
+<button class="cta" style="margin-top:10px;" type="submit">Send</button>
+</form>
 <ul class="contact-info">
-<li>Email: <a href="mailto:madhur@example.com">madhur@example.com</a></li>
+
 <li>LinkedIn: <a href="https://www.linkedin.com/in/madhur-sabherwal/" target="_blank">linkedin.com/in/madhur-sabherwal</a></li>
 </ul>
 </section>
@@ -901,5 +1074,11 @@ section:hover, .project-card:hover, .cert-card:hover, .recommendation-card:hover
             observer.observe(skillsSection);
         });
     </script>
+<script>
+function toggleMobileMenu() {
+  const navLinks = document.querySelector('.nav-links');
+  navLinks.classList.toggle('active');
+}
+</script>
 </body>
 </html>
